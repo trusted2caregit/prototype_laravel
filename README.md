@@ -118,6 +118,55 @@ After changing this file, save it, and go back to the Windows Powershell and try
 
 At this point, you are ready to create a basic Laravel project, or pull this repository and run it.
 
+## Setup GIT (WIP)
+Go to the `.ssh` folder.
+```
+$> cd ~/.ssh
+```
+
+Generate key files. Do not set password and do not override file name. Set everything to default. The algorithm used will be ED25519:
+```
+$> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+Now the `.ssh` folder will contain the following files:
+```
+$> ls
+-a----          5/2/2024  10:25 AM            411 id_ed25519
+-a----          5/2/2024  10:25 AM            103 id_ed25519.pub
+```
+The SSH agent on your machine must be configured and started before we can use it to manage your private key.
+```
+$> Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+$> Start-Service ssh-agent
+```
+Now you can add the private key:
+```
+$> ssh-add c:/Users/YOU/.ssh/id_ed25519
+```
+
+Now you need to add the public key to your GitHub account.
+Log into GitHub, go to your Settings and click on SSH and GPG keys.
+Under the Authenticate Keys section, Click "New SSH key" and copy the contents of your public file into the Key field. After giving your key an appropriate title, click on Add SSH Key.
+
+How do you copy the contents of the public key file? The following command copies the key file to the clipboard.
+```
+$> clip < ~/.ssh/id_ed25519.pub
+```
+
+Now you can clone a repository.
+
+It is recommended to create a general git workspace directory. You can do it the following way.
+```
+$> cd ~/Documents
+$> mkdir git
+$> cd ~/Documents/git
+```
+Now you can clone a repository.
+```
+$> git clone git@github.com:trusted2caregit/prototype_laravel.git
+```
+The repository will be cloned so long as you have access to it.
+
 ## Test Laravel
 You can either clone this repository, or you can create your own project. This section will tell you how to set up a project yourself using the Laravel Installer.
 
