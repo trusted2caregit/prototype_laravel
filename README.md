@@ -41,7 +41,7 @@ Example:
 ![image](https://github.com/user-attachments/assets/94d6b1c2-63d0-4fce-adf8-2ce7678896f3)
 
 ### Installing all required packages
-You need to install `git`, `git-lfs`, `mariadb`, `php`, `composer`. To do that with `choco`, do the following:
+You need to install `unzip`, `git`, `git-lfs`, `mariadb`, `php`, `composer`. To do that with `choco`, do the following:
 ```
 choco install unzip
 choco install git 
