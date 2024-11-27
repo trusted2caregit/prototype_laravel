@@ -1,7 +1,9 @@
 # prototype_laravel
 
 ## Windows 10
-To run this project you must have the following packages installed on your machine.
+To run this project you must have the following packages installed on your machine. If you already have `git`, `node`, `npm` and anything else in this list installed on your system using installers (not choco), I highly recommend uninstalling that stuff and cleaning it all off. You really should use a package manager for this kind of stuff.
+
+Here is a list of packages I have installed:
 ```
 $> choco list
 Chocolatey v2.2.2
@@ -31,7 +33,7 @@ In this window, copy and paste the following:
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-Reopen the Windows Powershell as an Administrator and test `choco` by querying its version
+**Reopen the Windows Powershell as an Administrator** and test `choco` by querying its version
 ```
 choco -v
 ```
@@ -65,7 +67,7 @@ $> npm -v
 10.9.0
 ```
 
-Note: `npm` might not work. Instead of the expected output, you'll probably get an error stating that the `Execution-Policy` does not allow unsigned scripts from running. About 99% of the stuff out there is unsigned, including `npm`. So set the execution policy to `Unrestricted` for now:
+Note: `npm` might not work. Instead of the expected output, you'll probably get an error stating that the `Execution-Policy` does not allow unsigned scripts from running. About 99% of the stuff out there is unsigned, including `npm`. So set the execution policy to `Unrestricted` for now and then try running `npm -v` again. It will now work!:
 ```
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
@@ -89,7 +91,7 @@ Another example is:
 extension=curl
 ;extension=ffi
 ;extension=ftp
-extension=fileinfo
+;extension=fileinfo
 ;extension=gd
 ;extension=gettext
 ;extension=gmp
@@ -103,7 +105,7 @@ extension=mbstring
 ;extension=odbc
 extension=openssl
 ;extension=pdo_firebird
-extension=pdo_mysql
+;extension=pdo_mysql
 ;extension=pdo_oci
 ;extension=pdo_odbc
 ;extension=pdo_pgsql
@@ -111,7 +113,7 @@ extension=pdo_mysql
 ;extension=pgsql
 ;extension=shmop
 ```
-Notice how `curl`, `fileinfo`, `mbstring`, `openssl`, and `pdo_mysql`. You will need to uncomment `fileinfo` and `pdo_mysql` yourself, otherwise the other extensions will already be uncommented. 
+Notice how `curl`, `mbstring`, and `openssl` are all uncommented. You will need to uncomment `fileinfo` and `pdo_mysql` yourself, otherwise the other extensions will already be uncommented. 
 After changing this file, save it, and go back to the Windows Powershell and try to install the `laravel/installer` again and this time it will work.
 
 At this point, you are ready to create a basic Laravel project, or pull this repository and run it.
