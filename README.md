@@ -43,6 +43,7 @@ Example:
 ### Installing all required packages
 You need to install `git`, `git-lfs`, `mariadb`, `php`, `composer`. To do that with `choco`, do the following:
 ```
+choco install unzip
 choco install git 
 choco install git-lfs
 choco install mariadb
