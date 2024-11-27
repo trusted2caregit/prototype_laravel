@@ -1,4 +1,4 @@
-# prototype_laravel
+# How to setup your environment for Laravel
 
 ## Windows 10
 To run this project you must have the following packages installed on your machine. If you already have `git`, `node`, `npm` and anything else in this list installed on your system using installers (not choco), I highly recommend uninstalling that stuff and cleaning it all off. You really should use a package manager for this kind of stuff.
