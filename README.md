@@ -171,6 +171,31 @@ The repository will be cloned so long as you have access to it.
 ## Test Laravel
 You can either clone this repository, or you can create your own project. This section will tell you how to set up a project yourself using the Laravel Installer.
 
+### Clone this repo
+To get started, just clone this repo. This requires all packages to be installed, and for `github` access to be setup. Now you need to create a workspace and clone the repository.
+
+Note: I simply created a `git` folder in my `Documents` folder and all of my GIT projects go there.
+```
+cd ~/Documents/git
+git clone git@github.com:trusted2caregit/prototype_laravel.git
+```
+Now navigate into the directory and run a Composer update. Composer update takes a few minutes to complete.
+```
+cd prototype_laravel
+composer update
+```
+Example:
+![image](https://github.com/user-attachments/assets/d7517d45-1159-44d5-a642-aa1e87c7043e)
+
+Once, the update completes, you can start the server and then open your browser and navigate to `http://127.0.0.1:8000`:
+```
+php artisan serve
+```
+![image](https://github.com/user-attachments/assets/e633b34a-3122-45c7-b581-d810bb8a8fa6)
+
+Result:
+![image](https://github.com/user-attachments/assets/38609100-72d9-498f-9084-4b204bc5b9f2)
+
 ### Create a new Laravel Project
 Open up a regular Windows Poweershell and navigate to your workspace and create a new project. For example:
 ```
