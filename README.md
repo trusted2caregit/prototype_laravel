@@ -145,9 +145,14 @@ $> ssh-add c:/Users/YOU/.ssh/id_ed25519
 ```
 
 Now you need to add the public key to your GitHub account.
-Log into GitHub, go to your Settings and click on SSH and GPG keys.
-Under the Authenticate Keys section, Click "New SSH key" and copy the contents of your public file into the Key field. After giving your key an appropriate title, click on Add SSH Key.
-
+1. Log into GitHub.
+2. Go to your Settings
+3. Click on SSH and GPG keys.
+4. Click `New SSH Key`.
+5. Provide a suitable title in the title field.
+6. Copy the contents of your pub file into the key field.
+7. Click `Add SSH Key`.
+   
 How do you copy the contents of the public key file? The following command copies the key file to the clipboard.
 ```
 $> clip < ~/.ssh/id_ed25519.pub
