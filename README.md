@@ -114,8 +114,7 @@ extension=openssl
 ;extension=pgsql
 ;extension=shmop
 ```
-Notice how `curl`, `mbstring`, and `openssl` are all uncommented. You will need to uncomment `fileinfo` and `pdo_mysql` yourself, otherwise the other extensions will already be uncommented. 
-After changing this file, save it, and go back to the Windows Powershell and try to install the `laravel/installer` again and this time it will work.
+Notice how `curl`, `mbstring`, and `openssl` are all uncommented. You will need to uncomment `fileinfo` and `pdo_mysql`. After changing this file, save it, and go back to the Windows Powershell and try to install the `laravel/installer` again and this time it will work.
 
 At this point, you are ready to create a basic Laravel project, or pull this repository and run it.
 
