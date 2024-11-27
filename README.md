@@ -118,5 +118,39 @@ After changing this file, save it, and go back to the Windows Powershell and try
 
 At this point, you are ready to create a basic Laravel project, or pull this repository and run it.
 
+## Test Laravel
+You can either clone this repository, or you can create your own project. This section will tell you how to set up a project yourself using the Laravel Installer.
+
+### Create a new Laravel Project
+Open up a regular Windows Poweershell and navigate to your workspace and create a new project. For example:
+```
+cd ~/Documents/dev-workspace
+laravel new my-test-project
+```
+This will start the New Project Wizard. You can call your project whatever you want, but in this case we called it `my-test-project`.
+
+Example:
+![image](https://github.com/user-attachments/assets/fa6c511a-9808-40f4-8928-08c7bec64f9e)
+
+Select `none` for starter kit.
+Select `PHPUnit` for test kit.
+
+It will install all necessary packages for Laravel into a new project directory called `my-test-project`. Part way through the install, it will ask you what database do you want to use, select `mariadb`. It will then ask if you want to migrate default database configurations. Select `yes`.
+Example:
+![image](https://github.com/user-attachments/assets/f3c61059-0c8c-442b-a079-76e147ad09ee)
+
+Once the database is migrated, you can run the server. Navigate to the directory and start the server.
+```
+cd my-test-project
+php artisan serve
+```
+Example:
+![image](https://github.com/user-attachments/assets/0562c0aa-0472-4749-99bb-da781aea0ca8)
+
+Open a browser, and navigate to `http://127.0.0.1:8000`. A basic Laravel webpage will appear. You now have the most basic Laravel project setup. From here you can add react capabilities using Inertia and/or other plugins.
+
+Result:
+![image](https://github.com/user-attachments/assets/38609100-72d9-498f-9084-4b204bc5b9f2)
+
 
 
