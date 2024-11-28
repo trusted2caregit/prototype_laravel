@@ -34,15 +34,10 @@ Now you need to add the public key to your GitHub account.
 3. Click on SSH and GPG keys.
 4. Click `New SSH Key`.
 5. Provide a suitable title in the title field.
-6. Copy the contents of your pub file into the key field.
+6. Copy the contents of the `id_rsa.pub` or `id_ed25519.pub` file into the key field.
 7. Click `Add SSH Key`.
    
-How do you copy the contents of the public key file? The following command copies the key file to the clipboard.
-```
-$> clip < ~/.ssh/id_ed25519.pub
-```
-
-Now you can clone a repository.
+Now you can clone a repository so long as you have been given access to it.
 
 It is recommended to create a general git workspace directory. You can do it the following way.
 ```
