@@ -1,6 +1,6 @@
 # Setup Environment
 
-## Required Packages
+## 1. Required Packages
 To run this project, you must have the following packages installed.
 
 1. git 
@@ -10,13 +10,13 @@ To run this project, you must have the following packages installed.
 5. nodejs 22.11.0+
 6. php 8.1+
 
-## Setup Linux
+## 2. Setup Linux
 Anyone that uses Linux should know how to install these packages and set up their environment using the native package manager. 
 
-## Setup Windows 10 (Chocolatey)
+## 3. Setup Windows 10 (Chocolatey)
 Windows is not quite so straight forward. It is important to install a suitable package manager and install required packages expressly throught this tool. You need the ability to update package versions and tailor your environment to the needs of the project. Chocolatey is the recommended option.
 
-### Install Chocolatey
+### 3.1. Install Chocolatey
 See: https://chocolatey.org/install
 
 1. Open Windows Powershell as an Administrator.
@@ -31,7 +31,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco -v
 ```
 
-### Installed required packages
+### 3.2. Installed required packages
 You need to install `unzip`, `git`, `mariadb`, `php`, `composer` and `nodejs-lts`. To do that with `choco`, do the following:
 ```
 choco install unzip
@@ -63,13 +63,13 @@ PHP version 8.1.12 (C:\tools\php83\php.exe)
 Run the "diagnose" command to get more detailed diagnostics output.
 ```
 
-### Resolving `npm` issues
+### 3.3. Resolving `npm` issues
 Note: `npm` might not work. Instead of the expected output, you'll probably get an error stating that the `Execution-Policy` does not allow unsigned scripts from running. About 99% of the stuff out there is unsigned, including `npm`. So set the execution policy to `Unrestricted` for now and then try running `npm -v` again. It will now work!:
 ```
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
 
-## Setting up PHP for Laravel
+## 4. Setting up PHP for Laravel
 There are a few PHP extensions that need to be activated and the Laravel Installer needs to be installed. The following can be done in any environment that has a valid `php` and `composer` package installed.
 
 First find where `php.ini` is located on your system for your current PHP version by running the following command:
@@ -93,7 +93,7 @@ Now you can install the Laravel installer using `composer`:
 composer global require laravel/installer
 ```
 
-## Testing Laravel
+## 5. Testing Laravel
 You can very quickly create a basic Laravel project to ensure your Laravel installation works. Go to a desired workspace directory on your machine and run the `laravel new` command.
 ```
 laravel new my-test-project
