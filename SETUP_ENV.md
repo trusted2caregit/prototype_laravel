@@ -115,8 +115,7 @@ php artisan serve
 Example:
 ![image](https://github.com/user-attachments/assets/0562c0aa-0472-4749-99bb-da781aea0ca8)
 
-Open a browser, and navigate to `http://127.0.0.1:8000`. A basic Laravel webpage will appear. You now have the most basic Laravel project setup. From here you can add react capabilities using Inertia and/or other plugins.
-
+Open a browser, and navigate to `http://127.0.0.1:8000`. A basic Laravel webpage will appear.
 Result:
 ![image](https://github.com/user-attachments/assets/38609100-72d9-498f-9084-4b204bc5b9f2)
 
