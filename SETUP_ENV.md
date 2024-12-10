@@ -108,8 +108,9 @@ It will install all necessary packages for Laravel into a new project directory 
 Example:
 ![image](https://github.com/user-attachments/assets/f3c61059-0c8c-442b-a079-76e147ad09ee)
 
-Once the database is migrated, the new project wizard will complete and you can run the server. Navigate to the directory and start the server.
+Once the database is migrated, the new project wizard will complete and you can run the server. Navigate to the directory and generate an app key and start the server.
 ```
+php artisan key:generate
 php artisan serve
 ```
 Example:
