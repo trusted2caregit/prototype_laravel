@@ -37,7 +37,7 @@ You need to install `unzip`, `git`, `mariadb`, `php`, `composer` and `nodejs-lts
 choco install unzip
 choco install git 
 choco install mariadb
-choco install php --version=8.1.12
+choco install php
 choco install composer
 choco install nodejs-lts
 ```
