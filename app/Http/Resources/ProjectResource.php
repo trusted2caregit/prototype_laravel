@@ -16,9 +16,10 @@ class ProjectResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->name,
+            'id' => $this->id,
             'name' => $this->name,
-            'description' => (new Carbon($this->created_at))->format('Y-m-d'),
+            'description' => $this->description,
+            'created_at' => (new Carbon($this->created_at))->format('Y-m-d'),
             'due_date' => (new Carbon($this->due_date))->format('Y-m-d'),
             'status' => $this->status,
             'image_path' => $this->image_path,
