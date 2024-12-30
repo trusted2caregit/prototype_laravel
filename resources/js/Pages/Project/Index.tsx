@@ -1,6 +1,7 @@
 import React from "react";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Head } from "@inertiajs/react";
+import { Head, Link } from "@inertiajs/react";
+import Pagination from "@/Components/Pagination";
 
 interface Project {
     id: number;
@@ -14,6 +15,12 @@ interface Project {
     };
 }
 
+interface PaginationLink {
+    url: string | null;
+    label: string;
+    active: boolean;
+}
+
 interface PaginatedProjects {
     data: Project[];
     links?: {
@@ -24,6 +31,7 @@ interface PaginatedProjects {
         current_page: number;
         last_page: number;
         total: number;
+        links?: PaginationLink[];
     };
 }
 
@@ -58,7 +66,7 @@ const Index: React.FC<IndexProps> = ({ auth, projects }) => {
                                         <th className="px-3 py-3">Create Date</th>
                                         <th className="px-3 py-3">Due Date</th>
                                         <th className="px-3 py-3">Created By</th>
-                                        <th className="px-3 py-3">Actions</th>
+                                        <th className="px-3 py-3 text-right">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -73,14 +81,28 @@ const Index: React.FC<IndexProps> = ({ auth, projects }) => {
                                             </td>
                                             <td className="px-3 py-2">{project.name}</td>
                                             <td className="px-3 py-2">{project.status ?? "N/A"}</td>
-                                            <td className="px-3 py-2">{project.created_at ?? "N/A"}</td>
-                                            <td className="px-3 py-2">{project.due_date ?? "N/A"}</td>
+                                            <td className="px-3 py-2 text-nowrap">{project.created_at ?? "N/A"}</td>
+                                            <td className="px-3 py-2 text-nowrap">{project.due_date ?? "N/A"}</td>
                                             <td className="px-3 py-2">{project.createdBy.name}</td>
-                                            <td className="px-3 py-2">Actions Placeholder</td>
+                                            <td className="px-3 py-2">
+                                                <Link 
+                                                    href={route("project.edit", project.id)}
+                                                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-1"
+                                                >
+                                                    Edit
+                                                </Link>
+                                                <Link 
+                                                    href={route("project.destroy", project.id)}
+                                                    className="font-medium text-red-600 dark:text-red-500 hover:underline mx-1"
+                                                >
+                                                    Delete
+                                                </Link>
+                                            </td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
+                            {projects.meta?.links && <Pagination links={projects.meta.links} />}
                         </div>
                     </div>
                 </div>
