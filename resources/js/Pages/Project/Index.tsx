@@ -35,7 +35,7 @@ interface IndexProps {
 const Index: React.FC<IndexProps> = ({ auth, projects }) => {
     return (
         <AuthenticatedLayout
-            user={auth?.user}
+            user={auth!.user}
             header={
                 <h2 className="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
                     Project
@@ -51,14 +51,14 @@ const Index: React.FC<IndexProps> = ({ auth, projects }) => {
                             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border-b-2 border-gray-500">
                                     <tr>
-                                        <th className="px-3 py-2">ID</th>
-                                        <th className="px-3 py-2">Image</th>
-                                        <th className="px-3 py-2">Name</th>
-                                        <th className="px-3 py-2">Status</th>
-                                        <th className="px-3 py-2">Create Date</th>
-                                        <th className="px-3 py-2">Due Date</th>
-                                        <th className="px-3 py-2">Created By</th>
-                                        <th className="px-3 py-2">Actions</th>
+                                        <th className="px-3 py-3">ID</th>
+                                        <th className="px-3 py-3">Image</th>
+                                        <th className="px-3 py-3">Name</th>
+                                        <th className="px-3 py-3">Status</th>
+                                        <th className="px-3 py-3">Create Date</th>
+                                        <th className="px-3 py-3">Due Date</th>
+                                        <th className="px-3 py-3">Created By</th>
+                                        <th className="px-3 py-3">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -69,7 +69,7 @@ const Index: React.FC<IndexProps> = ({ auth, projects }) => {
                                         >
                                             <td className="px-3 py-2">{project.id}</td>
                                             <td className="px-3 py-2">
-                                                <img src={project.image_path} alt="" />
+                                                <img src={project.image_path} style={{width:60}} />
                                             </td>
                                             <td className="px-3 py-2">{project.name}</td>
                                             <td className="px-3 py-2">{project.status ?? "N/A"}</td>
