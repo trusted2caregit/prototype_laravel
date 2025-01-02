@@ -1,5 +1,6 @@
 import React from "react";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
+import { PROJECT_STATUS_TEXT_MAP } from "@/constants";
 import { Head, Link } from "@inertiajs/react";
 import Pagination from "@/Components/Pagination";
 
@@ -7,7 +8,7 @@ interface Project {
     id: number;
     name: string;
     image_path?: string; // Assuming optional image path
-    status?: string;
+    status?: keyof typeof PROJECT_STATUS_TEXT_MAP;
     created_at?: string;
     due_date?: string;
     createdBy: {
@@ -80,7 +81,7 @@ const Index: React.FC<IndexProps> = ({ auth, projects }) => {
                                                 <img src={project.image_path} style={{width:60}} />
                                             </td>
                                             <td className="px-3 py-2">{project.name}</td>
-                                            <td className="px-3 py-2">{project.status ?? "N/A"}</td>
+                                            <td className="px-3 py-2">{project.status ? PROJECT_STATUS_TEXT_MAP[project.status] : "N/A"}</td>
                                             <td className="px-3 py-2 text-nowrap">{project.created_at ?? "N/A"}</td>
                                             <td className="px-3 py-2 text-nowrap">{project.due_date ?? "N/A"}</td>
                                             <td className="px-3 py-2">{project.createdBy.name}</td>
