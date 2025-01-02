@@ -1,6 +1,6 @@
 import React from "react";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { PROJECT_STATUS_TEXT_MAP } from "@/constants";
+import { PROJECT_STATUS_TEXT_MAP, PROJECT_STATUS_CLASS_MAP } from "@/constants";
 import { Head, Link } from "@inertiajs/react";
 import Pagination from "@/Components/Pagination";
 
@@ -81,7 +81,15 @@ const Index: React.FC<IndexProps> = ({ auth, projects }) => {
                                                 <img src={project.image_path} style={{width:60}} />
                                             </td>
                                             <td className="px-3 py-2">{project.name}</td>
-                                            <td className="px-3 py-2">{project.status ? PROJECT_STATUS_TEXT_MAP[project.status] : "N/A"}</td>
+                                            <td className="px-3 py-2">
+                                                <span
+                                                    className={`px-2 py-1 rounded text-white ${
+                                                        project.status ? PROJECT_STATUS_CLASS_MAP[project.status] : "bg-gray-500"
+                                                    }`}
+                                                >
+                                                    {project.status ? PROJECT_STATUS_TEXT_MAP[project.status] : "N/A"}
+                                                </span>
+                                            </td>
                                             <td className="px-3 py-2 text-nowrap">{project.created_at ?? "N/A"}</td>
                                             <td className="px-3 py-2 text-nowrap">{project.due_date ?? "N/A"}</td>
                                             <td className="px-3 py-2">{project.createdBy.name}</td>
