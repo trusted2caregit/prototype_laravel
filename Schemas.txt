@@ -1,0 +1,84 @@
+Database Structure
+1. pages Table
+Stores static and dynamic pages like "Home," "About Us," etc.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for each page.
+title	VARCHAR(255)	Page title (e.g., "Home," "Contact Us").
+slug	VARCHAR(255)	URL-friendly identifier (e.g., "home").
+content	TEXT	Content for the page.
+created_at	TIMESTAMP	Timestamp when the page was created.
+updated_at	TIMESTAMP	Timestamp when the page was last updated.
+2. occasions Table
+Stores information about occasions like weddings, birthdays, etc.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for each occasion.
+name	VARCHAR(255)	Name of the occasion (e.g., "Wedding").
+description	TEXT	Description of the occasion.
+image	VARCHAR(255)	Path to an image representing the occasion.
+created_at	TIMESTAMP	Timestamp when the occasion was created.
+3. products Table
+Stores product information like games, LED dancefloors, etc.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for each product.
+name	VARCHAR(255)	Name of the product (e.g., "Roulette").
+description	TEXT	Description of the product.
+price	DECIMAL(10, 2)	Base price for the product.
+image	VARCHAR(255)	Path to an image of the product.
+created_at	TIMESTAMP	Timestamp when the product was created.
+4. locations Table
+Stores the locations where your services are available.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for each location.
+name	VARCHAR(255)	Name of the location (e.g., "London").
+description	TEXT	Description of the location.
+image	VARCHAR(255)	Path to an image of the location.
+created_at	TIMESTAMP	Timestamp when the location was created.
+5. venues Table
+Stores venue-specific details and links to locations.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for each venue.
+name	VARCHAR(255)	Name of the venue (e.g., "Grand Ballroom").
+location_id	INT (Foreign Key)	Links to the locations table.
+description	TEXT	Description of the venue.
+image	VARCHAR(255)	Path to an image of the venue.
+created_at	TIMESTAMP	Timestamp when the venue was created.
+6. testimonials Table
+Stores customer reviews/testimonials.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for each testimonial.
+name	VARCHAR(255)	Name of the reviewer.
+content	TEXT	Review content.
+rating	INT	Rating out of 5.
+created_at	TIMESTAMP	Timestamp when the testimonial was created.
+7. related_items Table
+Stores the relationships between occasions and products for related services.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for the relationship.
+occasion_id	INT (Foreign Key)	Links to the occasions table.
+product_id	INT (Foreign Key)	Links to the products table.
+created_at	TIMESTAMP	Timestamp when the relationship was created.
+8. pricing Table
+Stores location-specific pricing for products.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for pricing.
+location_id	INT (Foreign Key)	Links to the locations table.
+product_id	INT (Foreign Key)	Links to the products table.
+price	DECIMAL(10, 2)	Price for the product in this location.
+created_at	TIMESTAMP	Timestamp when the pricing was created.
+9. contact_us Table
+Stores inquiries and contact form submissions.
+
+Column Name	Data Type	Description
+id	INT (Primary Key)	Unique identifier for the inquiry.
+name	VARCHAR(255)	Name of the sender.
+email	VARCHAR(255)	Email of the sender.
+message	TEXT	Inquiry message.
+created_at	TIMESTAMP	Timestamp when the inquiry was created.
