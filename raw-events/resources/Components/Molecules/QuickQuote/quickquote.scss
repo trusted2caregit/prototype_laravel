@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200.300.400,500,600,700,800,900&display=swap');
+.quote{
+.name label {display:none;}
+.name:focus label {display:block;}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: #25252b;
+}
+
+@property --a 
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.box {
+    position: fixed;
+    width: 68px;
+    z-index: 9999999;
+    height: 69px;
+    bottom: 25%;
+    right: 0;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+    filter: drop-shadow(0 15px 50px #000);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.box:hover {
+    width: 450px;
+    height: 500px;
+}
+@keyframes rotating {
+    0%
+    {
+        --a: 0deg;
+    }
+    100%
+    {
+        --a: 360deg;
+    }
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #45f3ff 0%, #45f3ff 5%, transparent 5%, transparent 40%, #45f3ff 50%);
+    filter: drop-shadow(0 15px 50px #000);
+    border-radius: 20px;  
+    animation: rotating 4s linear infinite;
+    animation-delay: 1s;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #262639;
+    border-radius: 15px;
+    border: 8px solid #25252b;
+}
+
+.message {
+    position: absolute;
+    inset: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+    z-index: 1000;
+    box-shadow: inset 10px 10px rgba(0,0,0,0.5);
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    transition: 0.5s;
+    color: #fff;
+    overflow: hidden;
+}
+
+.box:hover .message{
+    inset: 40px;
+}
+
+.messageBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    transform: translateY(167px);
+    transition: 0.5s;
+}
+
+.box:hover .messageBx {
+    transform: translateY(0px);
+}
+
+.messageBx h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+.messageBx input,button {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.messageBx input[type="date"], input::placeholder, button {
+    color: #999;
+    font-family: 'Poppins';
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #fff;
+    padding: 5px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+::-webkit-calendar-picker-indicator:hover {
+    box-shadow: 0 0 10px #45f345;
+}
+
+.messageBx button {
+    background-color: #45f3ff;
+    border: none;
+    font-weight: 500;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.messageBx button:hover {
+    box-shadow: 0 0 10px #45f345;
+    font-weight: 700;
+}
+}

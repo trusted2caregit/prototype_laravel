@@ -1,0 +1,64 @@
+.header-wrapper {
+    background-color: rgb(15 118 110 / 1);
+    color: rgb(255 255 255 / 1);
+  
+    .section-wrapper {
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      width: 100vw;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+  
+      .logo-section {
+        width: 50%;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+  
+        & img {
+          padding: .6rem;
+          max-height: 32rem;
+          max-width: 100%;
+          margin: auto;
+          display: block;
+          height: auto;
+          text-align: center;
+        }
+      }
+  
+      .info-section {
+        width: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .6rem;
+        max-width: 100%;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+  
+        & h3 {
+          font-size: min(3vw, 32px);
+          line-height: 2.5rem;
+          margin: 0;
+
+          @media (max-width: 768px) {
+            font-size: min(5vw, 32px);
+          }
+  
+          & a {
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  
