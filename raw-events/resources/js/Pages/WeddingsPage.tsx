@@ -1,12 +1,13 @@
 import '../../css/app.css';
-import WhyUs from 'resources/Components/Molecules/WhyUs/WhyUs';
-import SectionIntro from 'resources/Components/Molecules/Intro/SectionIntro'
 import QuickQuote from 'resources/Components/Molecules/QuickQuote/QuickQuote';
 import React from 'react';
 import Intro from 'resources/Components/Molecules/Intro/Intro';
 import Occasion from 'resources/Components/Molecules/Occasion/Occasion';
 import AddEntertainment from 'resources/Components/Molecules/AddEntertainment/AddEntertainment';
 import Locations from 'resources/Components/Molecules/Locations/Locations';
+import Testimonials from 'resources/Components/Molecules/Testimonial/Testimonials'
+import WhyUs from 'resources/Components/Molecules/WhyUs/WhyUs';
+import SectionIntro from 'resources/Components/Molecules/Intro/SectionIntro';
 
 
 const WeddingsPage = () => {
