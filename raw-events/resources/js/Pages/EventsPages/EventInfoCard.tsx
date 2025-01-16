@@ -6,7 +6,7 @@ import { ReactComponent as Trophy } from '@assets/svg/trophy.svg';
 import wedding from '@assets/images/home_cards/weddings.png';
 import birthday from '@assets/images/home_cards/birthday.png';
 import charity from '@assets/images/home_cards/charity.png';
-import EventInfoBox from 'resources/Components/Atoms/EventInfoBox/EventInfobox';
+import EventInfoBox from '../../../Components/Atoms/EventInfoBox/EventInfoBox';
 
 const EventInfoCard: React.FC = () => {
   const events = [

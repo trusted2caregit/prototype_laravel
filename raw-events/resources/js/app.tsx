@@ -8,6 +8,7 @@ import React from 'react';
 createInertiaApp({
   resolve: name => {
     const pages = import.meta.glob('./Pages/**/*.tsx', { eager: true });
+    console.log('Resolved pages:', pages);
     return pages[`./Pages/${name}.tsx`]
   },
   setup({ el, App, props }) {

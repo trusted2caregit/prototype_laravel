@@ -13,7 +13,7 @@ import { Link } from '@inertiajs/react';
 
 
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="App">
       <HeroSlider/>
@@ -57,5 +57,5 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default HomePage;
 

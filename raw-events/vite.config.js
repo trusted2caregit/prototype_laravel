@@ -12,8 +12,11 @@ export default defineConfig({
         react(),
         svgLoader(),
     ],
+    build: {
+        outDir: 'public/build', // Ensure it's set to 'public/build'
+    },
     resolve: {
-        alias:{
+        alias: {
             "@": "/resources/js",
             '@components': '/resources/Components',
             '@assets': '/resources/Assets',
