@@ -1,17 +1,13 @@
-import '../../../src/App.css';
-import Header from '../../Components/Molecules/Header/Header';
-import HeroSlider from '../../Components/Molecules/HeroSlider/HeroSlider';
-import Intro from '../../Components/Molecules/Intro/Intro';
-import QuickQuote from '../../Components/Molecules/QuickQuote/QuickQuote';
-import Occasion from '../../Components/Molecules/Occasion/Occasion';
-import AddEntertainment from '../../Components/Molecules/AddEntertainment/AddEntertainment';
-import Locations from '../../Components/Molecules/Locations/Locations';
-import Testimonials from '../../Components/Molecules/Testimonial/Testimonials';
-import MainNav from '../../Components/Molecules/MainNav/MainNav';
-import TopHeader from '../../Components/Molecules/TopHeader/TopHeader';
-import Footer from '../../Components/Molecules/Footer/Footer';
-import WhyUs from '../../Components/Molecules/WhyUs/WhyUs';
-import SectionIntro from '../../Components/Molecules/Intro/SectionIntro'
+import '../../../css/app.css';
+import React from 'react';
+import Intro from '../../../Components/Molecules/Intro/Intro';
+import QuickQuote from '../../../Components/Molecules/QuickQuote/QuickQuote';
+import Occasion from '../../../Components/Molecules/Occasion/Occasion';
+import AddEntertainment from '../../../Components/Molecules/AddEntertainment/AddEntertainment';
+import Locations from '../../../Components/Molecules/Locations/Locations';
+import Testimonials from '../../../Components/Molecules/Testimonial/Testimonials';
+import WhyUs from '../../../Components/Molecules/WhyUs/WhyUs';
+import SectionIntro from '../../../Components/Molecules/Intro/SectionIntro'
 
 
 const JamesBondPage = () => {

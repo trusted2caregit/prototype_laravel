@@ -1,59 +1,49 @@
-import '../../src/App.css';
-import Header from '../Components/Molecules/Header/Header';
-import HeroSlider from '../Components/Molecules/HeroSlider/HeroSlider';
-import Intro from '../Components/Molecules/Intro/Intro';
-import QuickQuote from '../Components/Molecules/QuickQuote/QuickQuote';
-import Occasion from '../Components/Molecules/Occasion/Occasion';
-import AddEntertainment from '../Components/Molecules/AddEntertainment/AddEntertainment';
-import Locations from '../Components/Molecules/Locations/Locations';
-import Testimonials from '../Components/Molecules/Testimonial/Testimonials';
-import MainNav from '../Components/Molecules/MainNav/MainNav';
-import TopHeader from '../Components/Molecules/TopHeader/TopHeader';
-import Footer from '../Components/Molecules/Footer/Footer';
-import WhyUs from '../Components/Molecules/WhyUs/WhyUs';
-import SectionIntro from '../Components/Molecules/Intro/SectionIntro'
+import '../../css/app.css';
+import React from 'react';
+import AddEntertainment from '../../Components/Molecules/AddEntertainment/AddEntertainment';
+import Testimonials from '../../Components/Molecules/Testimonial/Testimonials'
+import SectionIntro from '../../Components/Molecules/Intro/SectionIntro';
+import EventsMainContent from '../../Components/Molecules/EventsMainContent/EventsMainContent';
+import IntroNoBTN from '../../Components/Molecules/IntroNoBTN/IntroNoBTN';
 
 
-const WeddingsPage = () => {
+export const boxData = [
+  { id: 1, image: wedding, altTag: 'wedding_fun_casino_hire_photos', title: 'Wedding Photographs', description: "This is an important time for you to capture the critical memories. However, it can be a bit of waiting around for your guests, having a fun casino table or two keeping them entertained is a great way to pass the time. The tables themselves can make for a great 'photo op'. Our casino tables can also be set up outside, weather permitting.", buttonTitle:'Wedding Casino Hire', moreInfoText:"Interactive engaging wedding entertainment that won't bust the bank!", svgIcon:<Camera />, rotate: true, degreesToTilt: -6, link: '/event_info_card'},
+  { id: 2, image: birthday, altTag: 'birthday_fun_casino_hire_Lancashire', title: 'Birthday Fun Casino Tables', description: 'Perfect for the coming of age birthday or any birthday really. Spice it up with prizes!', buttonTitle:'Birthday Casino Hire', moreInfoText:'Perfect for the coming of age birthday or any birthday really. Spice it up with prizes!', svgIcon:<Cake />, rotate: true, degreesToTilt: -6, link: '/weddings'},
+  { id: 3, image: corporate, altTag: 'corporate_fun_casino_hire_Lancashire', title: 'Corporate Fun Casino Tables', description: "Team builds, product launches, anniversarys. You name it - only the best in entertainment will do.", buttonTitle:'Corporate Fun Casino', moreInfoText:'Team builds, product launches, anniversarys. You name it - only the best in entertainment will do.', svgIcon:<Trophy />, rotate: false, degreesToTilt: -6, link: '/weddings'},
+  { id: 4, image: charity, altTag: 'charity_fun_casino_hire_Lancashire', title: 'Charity Casino Events', description: 'Versatile and fun - fundraising makes the casino tables a "must have" at your charity night.', buttonTitle:'Charity Casino Night', moreInfoText:'Versatile and fun - fundraising makes the casino tables a "must have" at your charity night.', svgIcon:<GBP />, rotate: true, degreesToTilt: -6, link: '/weddings'},
+  { id: 5, image: themedevents, altTag: 'themed_events_fun_casino_hire_Lancashire', title: 'Themed Events', description: 'Our speciality James Bond nights could make the skyfall with that and many more amazing themes. We have the best ways to make your event special.', buttonTitle:'Themed Casino Nights', moreInfoText:'Our speciality James Bond nights could make the skyfall with that and many more amazing themes. We have the best ways to make your event special.', svgIcon:<Themed />, rotate: true, degreesToTilt: -6, link: '/weddings'},
+  { id: 6, image: locations, altTag: 'locasions_for_fun_casino_hire_Lancashire', title: 'Our Locations', description: "Based in the North West, but do cover most areas of the UK especially for larger events. If you are concerned please don't hesitate to contact us.", buttonTitle:'Locations', moreInfoText:"Based in the North West, but do cover most areas of the UK especially for larger events. If you are concerned please don't hesitate to contact us", svgIcon:<Location />, rotate: true, degreesToTilt: -6, link: '/weddings'},
+];
+
+
+const ThemedPage = () => {
   return (
     <div className="App">
  
-      <Intro titleText='"Theme Premium Fun Casino Entertainment | Casino Casino Casino Ltd"' isH1={true} buttonLink='#' buttonText='Read About Us'>
-      <p>At Casino Casino Casino Ltd, our mission is to elevate every event to unforgettable heights by providing premium entertainment services tailored to the unique needs of our clients. With over 20 years of industry expertise, we pride ourselves on delivering high-class experiences through our professional croupiers, extensive range of equipment, and personalised approach to each event.</p>
-      <p>From fun casino nights and selfie mirrors to dazzling dancefloors and themed experiences, we strive to exceed expectations and create lasting memories for weddings, milestone birthdays, charity events, corporate gatherings, and more.</p>
-      <p>Our commitment to excellence ensures that every client receives the attention they deserve, making us the premier choice for exceptional entertainment services. Let us transform your event into an extraordinary celebration with Casino Casino Casino Ltd.</p>
-      </Intro>      
-      <QuickQuote/>
-      <div className="wrapper">
-        <h2>Occasions</h2>
-        <p>At Casino Casino Casino Ltd, our fun casino entertainment services are perfect for a variety of special occasions. Whether you're celebrating a once-in-a-lifetime event like a wedding or marking a milestone birthday such as an 18th, 21st, 30th, 40th, 50th, or 60th, our packages are designed to add excitement and glamour to your festivities.</p>
-        <p>Additionally, we specialise in hosting Charity Casino Nights, providing a unique and engaging way to raise funds for a good cause while ensuring your guests have an unforgettable experience.</p>
-        <p>Furthermore, our themed events, inspired by iconic themes like James Bond, Las Vegas, Hollywood, and the Wild West, offer a touch of extravagance and sophistication to any themed night.</p>
-        <p>Lastly, our corporate entertainment services provide the perfect blend of professionalism and fun, making us the ideal choice for corporate events and team-building activities. Whatever the occasion, Casino Casino Casino Ltd is here to make your event truly memorable.</p>
-        <Occasion/>
-      </div>
-      <div className="wrapper">
-        <h2>More Entertainment</h2>
-        <p>At Casino Casino Casino Ltd, we listen to our clients "Your service is briilant; wish you supplied our selfie mirror!" So we did just that...</p>
-        <p>Our wide range of premium services is designed to elevate your event: From our captivating selfie mirrors, elegant white LED twinkle dancefloors, mesmerizing LED letters, to our indulgent chocolate fountain hire, we bring the perfect blend of fun and elegance to every occasion. Explore our services below and let us turn your event into a memorable celebration that guests will rave about for years to come.</p>
-        <AddEntertainment/>
-      </div>
-      <div className="wrapper">
-        <h2>Why Choose Us!</h2>
-        <p>At Casino Casino Casino Ltd, we pride ourselves on being the premier choice for your entertainment needs. With over 20 years of experience in the event industry, our team brings a wealth of expertise and professionalism to every occasion. We understand that choosing the right entertainment provider is crucial, which is why we offer a range of compelling reasons to consider us:</p>
-        <WhyUs />
-      </div>
+      <IntroNoBTN titleText='"Wedding Fun Casino Entertainment | Casino Casino Casino Ltd"' isH1={true} buttonLink='#' buttonText='Read About Us'>
+      <p>Make your wedding unforgettable with our premium fun casino table hire. From elegant roulette tables to thrilling blackjack games, we bring a touch of sophistication and fun to your special day.</p>
+      <p>Whether it's during the photo period, wedding breakfast, or evening reception, our casino tables keep guests entertained and talking about your wedding for years to come!</p>
+      <p>Don't forget we have more services that go perfectly for weddings</p>
+      </IntroNoBTN>
+      <EventsMainContent/>
+      
       <div className="wrapper">
         <h2>Reccomendations</h2>
-        <p>We take pride in our positive reviews and recommendations from satisfied clients, reflecting our commitment to delivering exceptional entertainment experiences.</p>
+        <p>Don't just take our word for it. Take a look at What Our Couples Say: </p>
         <Testimonials/>
         <SectionIntro buttonLink='#' buttonText='Read More'>
         <p>Please feel free to read some more real life testimonials off our customers.</p>
         </SectionIntro>
       </div>
-      <Locations/>
+      <div className="wrapper">
+        <h2>More Entertainment</h2>
+        <p>Looking to add even more excitement to your event? In addition to our fun casino tables, we offer a range of premium entertainment options to make your special day unforgettable. From <Link to="/led_dancefloors">dazzling white LED dancefloors</Link> to the perfect photo opportunity with our <Link to="/magic_mirror">magic selfie mirrors</Link>, we’ve got everything you need to create lasting memories. Enhance the atmosphere with romantic <Link to="/led_letters">LOVE letters</Link>, indulge your guests with <Link to="/chocolate_fountains">deluxe chocolate fountains</Link>, and more – all from one trusted provider.</p>
+        <p>Book multiple services with us and enjoy exclusive package discounts – because your event deserves nothing but the best!</p>
+        <AddEntertainment/>
+      </div>
     </div>
   );
 }
 
-export default WeddingsPage;
+export default ThemedPage;

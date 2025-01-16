@@ -6,7 +6,3 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('HomePage');
 });
-
-Route::get('/', function () {
-    return Inertia::render('WeddingPage');
-});

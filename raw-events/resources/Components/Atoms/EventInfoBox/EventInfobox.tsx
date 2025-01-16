@@ -9,7 +9,7 @@ interface EventInfoCardProps {
   description: string;
 }
 
-const EventInfoCard: React.FC<EventInfoCardProps> = ({ title, image, icon, description }) => {
+const EventInfoBox: React.FC<EventInfoCardProps> = ({ title, image, icon, description }) => {
   return (
     <div className="event" style={{ backgroundImage: `url(${image})` }}>
       <div className="event-inner">
@@ -21,4 +21,4 @@ const EventInfoCard: React.FC<EventInfoCardProps> = ({ title, image, icon, descr
   );
 };
 
-export default EventInfoCard;
+export default EventInfoBox;

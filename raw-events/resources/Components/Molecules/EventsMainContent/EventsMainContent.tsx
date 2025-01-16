@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react';
 import './eventsmainontent.scss';
 import SocialAnimateBtn from '../SocialButtons/SocialAnimateBtn';
-import wedding from '../../../src/Assets/images/home_cards/weddings.png';
-import birthday from '../../../src/Assets/images/home_cards/birthday.png';
-import charity from '../../../src/Assets/images/home_cards/charity.png';
-import { ReactComponent as Camera } from '../../../src/Assets/svg/camera.svg';
-import EventInfoCard from '../../../Pages/EventsPages/EventInfoCard';
+import EventInfoCard from 'resources/js/Pages/EventsPages/EventInfoCard';
+import wedding from '@assets/images/home_cards/weddings.png';
+import birthday from '@assets/images/home_cards/birthday.png';
+import charity from '@assets/images/home_cards/charity.png';
+import { ReactComponent as Camera } from '@assets/svg/camera.svg';
+
 
 
 const EventsMainContent: React.FC = () => {

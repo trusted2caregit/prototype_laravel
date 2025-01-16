@@ -1,28 +1,24 @@
-import '../../../src/App.css';
-import IntroNoBTN from '../../Components/Molecules/IntroNoBTN/IntroNoBTN';
-import { Link } from 'react-router-dom';
-import QuickQuote from '../../Components/Molecules/QuickQuote/QuickQuote';
-import AddEntertainment from '../../Components/Molecules/AddEntertainment/AddEntertainment';
-import Locations from '../../Components/Molecules/Locations/Locations';
-import Testimonials from '../../Components/Molecules/Testimonial/Testimonials';
-import WhyUs from '../../Components/Molecules/WhyUs/WhyUs';
-import SectionIntro from '../../Components/Molecules/Intro/SectionIntro'
-import ServiceBoxGroup from '../../Components/Molecules/ServiceBoxGroup/ServiceBoxGroup';
-import { ReactComponent as Camera } from '../../../src/Assets/svg/camera.svg';
-import { ReactComponent as Cake } from '../../../src/Assets/svg/cake.svg';
-import { ReactComponent as GBP } from '../../../src/Assets/svg/gbp.svg';
-import { ReactComponent as Location } from '../../../src/Assets/svg/location.svg';
-import { ReactComponent as Themed } from '../../../src/Assets/svg/themed.svg';
-import { ReactComponent as Trophy } from '../../../src/Assets/svg/trophy.svg';
-import wedding from '../../../src/Assets/images/home_cards/weddings.png';
-import birthday from '../../../src/Assets/images/home_cards/birthday.png';
-import corporate from '../../../src/Assets/images/home_cards/corporate.png';
-import charity from '../../../src/Assets/images/home_cards/charity.png';
-import themedevents from '../../../src/Assets/images/home_cards/theming.png';
-import locations from '../../../src/Assets/images/home_cards/locations.png';
-import EventInfoCard from './EventInfoCard';
-import SocialAnimateBtn from '../../Components/Molecules/SocialButtons/SocialAnimateBtn';
-import EventsMainContent from '../../Components/Molecules/EventsMainContent/EventsMainContent';
+import React from 'react';
+import '../../../css/app.css';
+import AddEntertainment from '../../../Components/Molecules/AddEntertainment/AddEntertainment';
+import Testimonials from '../../../Components/Molecules/Testimonial/Testimonials';
+import SectionIntro from '../../../Components/Molecules/Intro/SectionIntro'
+import { Link } from '@inertiajs/react';
+import IntroNoBTN from '../../../Components/Molecules/IntroNoBTN/IntroNoBTN';
+import EventsMainContent from '../../../Components/Molecules/EventsMainContent/EventsMainContent';
+import { ReactComponent as Camera } from '@assets/svg/camera.svg';
+import { ReactComponent as Cake } from '@assets/svg/cake.svg';
+import { ReactComponent as GBP } from '@assets/svg/gbp.svg';
+import { ReactComponent as Location } from '@assets/svg/location.svg';
+import { ReactComponent as Themed } from '@assets/svg/themed.svg';
+import { ReactComponent as Trophy } from '@assets/svg/trophy.svg';
+import wedding from '@assets/images/home_cards/weddings.png';
+import birthday from '@assets/images/home_cards/weddings.png';
+import corporate from '@assets/images/home_cards/corporate.png';
+import charity from '../../../Assets/images/home_cards/charity.png';
+import themedevents from '@assets/images/home_cards/theming.png';
+import locations from '@assets/images/home_cards/locations.png';
+
 
 
 export const boxData = [
@@ -56,7 +52,7 @@ const WeddingsPage = () => {
       </div>
       <div className="wrapper">
         <h2>More Entertainment</h2>
-        <p>Looking to add even more excitement to your event? In addition to our fun casino tables, we offer a range of premium entertainment options to make your special day unforgettable. From <Link to="/led_dancefloors">dazzling white LED dancefloors</Link> to the perfect photo opportunity with our <Link to="/magic_mirror">magic selfie mirrors</Link>, we’ve got everything you need to create lasting memories. Enhance the atmosphere with romantic <Link to="/led_letters">LOVE letters</Link>, indulge your guests with <Link to="/chocolate_fountains">deluxe chocolate fountains</Link>, and more – all from one trusted provider.</p>
+        <p>Looking to add even more excitement to your event? In addition to our fun casino tables, we offer a range of premium entertainment options to make your special day unforgettable. From <Link href="/led_dancefloors">dazzling white LED dancefloors</Link> to the perfect photo opportunity with our <Link href="/magic_mirror">magic selfie mirrors</Link>, we’ve got everything you need to create lasting memories. Enhance the atmosphere with romantic <Link href="/led_letters">LOVE letters</Link>, indulge your guests with <Link href="/chocolate_fountains">deluxe chocolate fountains</Link>, and more – all from one trusted provider.</p>
         <p>Book multiple services with us and enjoy exclusive package discounts – because your event deserves nothing but the best!</p>
         <AddEntertainment/>
       </div>

@@ -1,24 +1,20 @@
-import '../../../src/App.css';
-import Header from '../../Components/Molecules/Header/Header';
-import HeroSlider from '../../Components/Molecules/HeroSlider/HeroSlider';
-import Intro from '../../Components/Molecules/Intro/Intro';
-import QuickQuote from '../../Components/Molecules/QuickQuote/QuickQuote';
-import Occasion from '../../Components/Molecules/Occasion/Occasion';
-import AddEntertainment from '../../Components/Molecules/AddEntertainment/AddEntertainment';
-import Locations from '../../Components/Molecules/Locations/Locations';
-import Testimonials from '../../Components/Molecules/Testimonial/Testimonials';
-import MainNav from '../../Components/Molecules/MainNav/MainNav';
-import TopHeader from '../../Components/Molecules/TopHeader/TopHeader';
-import Footer from '../../Components/Molecules/Footer/Footer';
-import WhyUs from '../../Components/Molecules/WhyUs/WhyUs';
-import SectionIntro from '../../Components/Molecules/Intro/SectionIntro'
+import '../../../css/app.css';
+import React from 'react';
+import Intro from '../../../Components/Molecules/Intro/Intro';
+import QuickQuote from '../../../Components/Molecules/QuickQuote/QuickQuote';
+import Occasion from '../../../Components/Molecules/Occasion/Occasion';
+import AddEntertainment from '../../../Components/Molecules/AddEntertainment/AddEntertainment';
+import Locations from '../../../Components/Molecules/Locations/Locations';
+import Testimonials from '../../../Components/Molecules/Testimonial/Testimonials';
+import WhyUs from '../../../Components/Molecules/WhyUs/WhyUs';
+import SectionIntro from '../../../Components/Molecules/Intro/SectionIntro'
 
 
 const GangstersDollsPage = () => {
   return (
     <div className="App">
  
-      <Intro titleText='"GangstersDollsPage Premium Fun Casino Entertainment | Casino Casino Casino Ltd"' isH1={true} buttonLink='#' buttonText='Read About Us'>
+      <Intro titleText='"Premium Fun Casino Entertainment | Casino Casino Casino Ltd"' isH1={true} buttonLink='#' buttonText='Read About Us'>
       <p>At Casino Casino Casino Ltd, our mission is to elevate every event to unforgettable heights by providing premium entertainment services tailored to the unique needs of our clients. With over 20 years of industry expertise, we pride ourselves on delivering high-class experiences through our professional croupiers, extensive range of equipment, and personalised approach to each event.</p>
       <p>From fun casino nights and selfie mirrors to dazzling dancefloors and themed experiences, we strive to exceed expectations and create lasting memories for weddings, milestone birthdays, charity events, corporate gatherings, and more.</p>
       <p>Our commitment to excellence ensures that every client receives the attention they deserve, making us the premier choice for exceptional entertainment services. Let us transform your event into an extraordinary celebration with Casino Casino Casino Ltd.</p>

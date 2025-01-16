@@ -1,25 +1,22 @@
-import '../../../src/App.css';
-import IntroNoBTN from '../../Components/Molecules/IntroNoBTN/IntroNoBTN';
-import { Link } from 'react-router-dom';
-import QuickQuote from '../../Components/Molecules/QuickQuote/QuickQuote';
-import AddEntertainment from '../../Components/Molecules/AddEntertainment/AddEntertainment';
-import Locations from '../../Components/Molecules/Locations/Locations';
-import Testimonials from '../../Components/Molecules/Testimonial/Testimonials';
-import WhyUs from '../../Components/Molecules/WhyUs/WhyUs';
-import SectionIntro from '../../Components/Molecules/Intro/SectionIntro'
-import ServiceBoxGroup from '../../Components/Molecules/ServiceBoxGroup/ServiceBoxGroup';
-import { ReactComponent as Camera } from '../../../src/Assets/svg/camera.svg';
-import { ReactComponent as Cake } from '../../../src/Assets/svg/cake.svg';
-import { ReactComponent as GBP } from '../../../src/Assets/svg/gbp.svg';
-import { ReactComponent as Location } from '../../../src/Assets/svg/location.svg';
-import { ReactComponent as Themed } from '../../../src/Assets/svg/themed.svg';
-import { ReactComponent as Trophy } from '../../../src/Assets/svg/trophy.svg';
-import wedding from '../../../src/Assets/images/home_cards/weddings.png';
-import birthday from '../../../src/Assets/images/home_cards/birthday.png';
-import corporate from '../../../src/Assets/images/home_cards/corporate.png';
-import charity from '../../../src/Assets/images/home_cards/charity.png';
-import themedevents from '../../../src/Assets/images/home_cards/theming.png';
-import locations from '../../../src/Assets/images/home_cards/locations.png';
+import React from 'react';
+import '../../../css/app.css';
+import AddEntertainment from '../../../Components/Molecules/AddEntertainment/AddEntertainment';
+import Testimonials from '../../../Components/Molecules/Testimonial/Testimonials';
+import SectionIntro from '../../../Components/Molecules/Intro/SectionIntro'
+import { Link } from '@inertiajs/react';
+import IntroNoBTN from '../../../Components/Molecules/IntroNoBTN/IntroNoBTN';
+import { ReactComponent as Camera } from '../../../Assets/svg/camera.svg';
+import { ReactComponent as Cake } from '../../../Assets/svg/cake.svg';
+import { ReactComponent as GBP } from '../../../../src/Assets/svg/gbp.svg';
+import { ReactComponent as Location } from '../../../../src/Assets/svg/location.svg';
+import { ReactComponent as Themed } from '../../../../src/Assets/svg/themed.svg';
+import { ReactComponent as Trophy } from '../../../../src/Assets/svg/trophy.svg';
+import wedding from '../../../Assets/images/home_cards/weddings.png';
+import birthday from '../../../../resources/Assets/images/home_cards/weddings.png';
+import corporate from '../../../../src/Assets/images/home_cards/corporate.png';
+import charity from '../../../../src/Assets/images/home_cards/charity.png';
+import themedevents from '../../../../src/Assets/images/home_cards/theming.png';
+import locations from '../../../../src/Assets/images/home_cards/locations.png';
 import EventInfoCard from './EventInfoCard';
 
 
