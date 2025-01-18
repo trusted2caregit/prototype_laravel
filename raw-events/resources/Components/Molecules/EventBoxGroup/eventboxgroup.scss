@@ -1,0 +1,21 @@
+/* serviceboxgroup.scss */
+
+.box-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed */
+}
+
+/* Adjust the width based on your design */
+.box-group .service-box {
+  width: calc(28% - 10px); /* Adjust margin as needed */
+  margin-bottom: 20px;
+  min-height: 600px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .box-group .service-box {
+    width: 100%;
+  }
+}
