@@ -8,9 +8,16 @@ import IntroNoBTN from '../../Components/Molecules/IntroNoBTN/IntroNoBTN';
 import wedding from '@assets/images/home_cards/weddings.png';
 import birthday from '@assets/images/home_cards/weddings.png';
 import corporate from '@assets/images/home_cards/corporate.png';
-import charity from '@assests/images/home_cards/charity.png';
+import charity from '@assets/images/home_cards/charity.png';
 import themedevents from '@assets/images/home_cards/theming.png';
 import locations from '@assets/images/home_cards/locations.png';
+import { ReactComponent as Camera } from '../../Assets/svg/camera.svg';
+import { ReactComponent as Cake } from '../../Assets/svg/cake.svg';
+import { ReactComponent as GBP } from '../../Assets/svg/gbp.svg';
+import { ReactComponent as Location } from '../../Assets/svg/location.svg';
+import { ReactComponent as Themed } from '../../Assets/svg/themed.svg';
+import { ReactComponent as Trophy } from '../../Assets/svg/trophy.svg';
+import { Link } from '@inertiajs/react';
 
 
 export const boxData = [
@@ -44,7 +51,7 @@ const WeddingsPage = () => {
       </div>
       <div className="wrapper">
         <h2>More Entertainment</h2>
-        <p>Looking to add even more excitement to your event? In addition to our fun casino tables, we offer a range of premium entertainment options to make your special day unforgettable. From <Link to="/led_dancefloors">dazzling white LED dancefloors</Link> to the perfect photo opportunity with our <Link to="/magic_mirror">magic selfie mirrors</Link>, we’ve got everything you need to create lasting memories. Enhance the atmosphere with romantic <Link to="/led_letters">LOVE letters</Link>, indulge your guests with <Link to="/chocolate_fountains">deluxe chocolate fountains</Link>, and more – all from one trusted provider.</p>
+        <p>Looking to add even more excitement to your event? In addition to our fun casino tables, we offer a range of premium entertainment options to make your special day unforgettable. From <Link href="/led_dancefloors">dazzling white LED dancefloors</Link> to the perfect photo opportunity with our <Link href="/magic_mirror">magic selfie mirrors</Link>, we’ve got everything you need to create lasting memories. Enhance the atmosphere with romantic <Link href="/led_letters">LOVE letters</Link>, indulge your guests with <Link href="/chocolate_fountains">deluxe chocolate fountains</Link>, and more – all from one trusted provider.</p>
         <p>Book multiple services with us and enjoy exclusive package discounts – because your event deserves nothing but the best!</p>
         <AddEntertainment/>
       </div>

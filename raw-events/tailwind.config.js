@@ -7,6 +7,8 @@ export default {
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.tsx',
+        './resources/**/*.png',
+        './resources/**/*.svg',
         './resources/**/*.vue',
     ],
     theme: {

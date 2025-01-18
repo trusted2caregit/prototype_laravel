@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
-import svgLoader from 'vite-svg-loader';
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
     plugins: [
@@ -10,7 +10,7 @@ export default defineConfig({
             refresh: true,
         }),
         react(),
-        svgLoader(),
+        svgr(),
     ],
     build: {
         outDir: 'public/build', // Ensure it's set to 'public/build'

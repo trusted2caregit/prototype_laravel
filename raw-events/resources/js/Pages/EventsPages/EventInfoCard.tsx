@@ -1,12 +1,12 @@
 // App.tsx
 import React from 'react';
-import { ReactComponent as Camera } from '@assets/svg/camera.svg';
-import { ReactComponent as Cake } from '@assets/svg/cake.svg';
-import { ReactComponent as Trophy } from '@assets/svg/trophy.svg';
-import wedding from '@assets/images/home_cards/weddings.png';
-import birthday from '@assets/images/home_cards/birthday.png';
-import charity from '@assets/images/home_cards/charity.png';
-import EventInfoBox from '../../../../resources/Components/Atoms/EventInfoBox/EventInfobox';
+import { ReactComponent as Camera } from '../../../Assets/svg/camera.svg';
+import { ReactComponent as Cake } from '../../../Assets/svg/cake.svg';
+import { ReactComponent as Trophy } from '../../../Assets/svg/trophy.svg';
+import wedding from '../../../Assets/images/home_cards/weddings.png';
+import birthday from '../../../Assets/images/home_cards/birthday.png';
+import charity from '../../../Assets/images/home_cards/charity.png';
+import EventInfoBox from '../../../Components/Atoms/EventInfoBox/EventInfoBox';
 
 const EventInfoCard: React.FC = () => {
   const events = [

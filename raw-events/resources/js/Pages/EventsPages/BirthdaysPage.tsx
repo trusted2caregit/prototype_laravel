@@ -7,16 +7,16 @@ import { Link } from '@inertiajs/react';
 import IntroNoBTN from '../../../Components/Molecules/IntroNoBTN/IntroNoBTN';
 import { ReactComponent as Camera } from '../../../Assets/svg/camera.svg';
 import { ReactComponent as Cake } from '../../../Assets/svg/cake.svg';
-import { ReactComponent as GBP } from '../../../../src/Assets/svg/gbp.svg';
-import { ReactComponent as Location } from '../../../../src/Assets/svg/location.svg';
-import { ReactComponent as Themed } from '../../../../src/Assets/svg/themed.svg';
-import { ReactComponent as Trophy } from '../../../../src/Assets/svg/trophy.svg';
-import wedding from '../../../Assets/images/home_cards/weddings.png';
-import birthday from '../../../../resources/Assets/images/home_cards/weddings.png';
-import corporate from '../../../../src/Assets/images/home_cards/corporate.png';
-import charity from '../../../../src/Assets/images/home_cards/charity.png';
-import themedevents from '../../../../src/Assets/images/home_cards/theming.png';
-import locations from '../../../../src/Assets/images/home_cards/locations.png';
+import { ReactComponent as GBP } from '../../../Assets/svg/gbp.svg';
+import { ReactComponent as Location } from '../../../Assets/svg/location.svg';
+import { ReactComponent as Themed } from '../../../Assets/svg/themed.svg';
+import { ReactComponent as Trophy } from '../../../Assets/svg/trophy.svg';
+import wedding from '@assets/images/home_cards/weddings.png';
+import birthday from '@assets/images/home_cards/weddings.png';
+import corporate from '@assets/images/home_cards/corporate.png';
+import charity from '@assets/images/home_cards/charity.png';
+import themedevents from '@assets/images/home_cards/theming.png';
+import locations from '@assets/images/home_cards/locations.png';
 import EventInfoCard from './EventInfoCard';
 
 
@@ -59,7 +59,7 @@ const BirthdayPage = () => {
  
       <IntroNoBTN titleText='"Birthday Fun Casino Hire | Casino Casino Casino Ltd"' isH1={true} buttonLink='#' buttonText='Read About Us'>
       <p>Planning a birthday party and want to make it truly unforgettable? Whether you're celebrating a milestone or just another special year, Casino Casino Casino provides the ultimate entertainment experience with our fun casino table hire. Our range of casino games, including roulette, blackjack, and poker tables, are a fantastic way to bring guests together, creating memories that will last long after the party ends.</p>
-      <p>From 18th birthdays to 60th birthdays and beyond, our casino tables add excitement and elegance to any celebration. Plus, if you’re planning multiple events or hiring other entertainment options, we offer great discounts when you bundle services like <Link to="/magic_mirror">magic selfie mirrors</Link>, <Link to="/led_dancefloors">dazzling dancefloors</Link>, and our <Link to="/chocolate_fountains">deluxe chocolate fountains</Link>. Read on to discover the perfect casino experience for your birthday celebration!</p>
+      <p>From 18th birthdays to 60th birthdays and beyond, our casino tables add excitement and elegance to any celebration. Plus, if you’re planning multiple events or hiring other entertainment options, we offer great discounts when you bundle services like <Link href="/magic_mirror">magic selfie mirrors</Link>, <Link href="/led_dancefloors">dazzling dancefloors</Link>, and our <Link href="/chocolate_fountains">deluxe chocolate fountains</Link>. Read on to discover the perfect casino experience for your birthday celebration!</p>
       </IntroNoBTN>
       <div className="wrapper">
       <EventInfoCard/>
@@ -75,7 +75,7 @@ const BirthdayPage = () => {
       </div>
       <div className="wrapper">
         <h2>More Entertainment</h2>
-        <p>Looking to add even more excitement to your event? In addition to our fun casino tables, we offer a range of premium entertainment options to make your special day unforgettable. From <Link to="/led_dancefloors">dazzling white LED dancefloors</Link> to the perfect photo opportunity with our <Link to="/magic_mirror">magic selfie mirrors</Link>, we’ve got everything you need to create lasting memories. Enhance the atmosphere with romantic <Link to="/led_letters">LOVE letters</Link>, indulge your guests with <Link to="/chocolate_fountains">deluxe chocolate fountains</Link>, and more – all from one trusted provider.</p>
+        <p>Looking to add even more excitement to your event? In addition to our fun casino tables, we offer a range of premium entertainment options to make your special day unforgettable. From <Link href="/led_dancefloors">dazzling white LED dancefloors</Link> to the perfect photo opportunity with our <Link href="/magic_mirror">magic selfie mirrors</Link>, we’ve got everything you need to create lasting memories. Enhance the atmosphere with romantic <Link href="/led_letters">LOVE letters</Link>, indulge your guests with <Link href="/chocolate_fountains">deluxe chocolate fountains</Link>, and more – all from one trusted provider.</p>
         <p>Book multiple services with us and enjoy exclusive package discounts – because your event deserves nothing but the best!</p>
         <AddEntertainment/>
       </div>
