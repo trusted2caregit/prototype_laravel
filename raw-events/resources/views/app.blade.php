@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible"content="ie=egde">
     @viteReactRefresh
-    @vite(['resources/css/app.css', 'resources/js/app.tsx'])
+    @vite(['resources/css/app.css', 'resources/js/app.tsx', 'resources/js/app.tsx'])
     @inertiaHead
     <title>Test</title>
 </head>

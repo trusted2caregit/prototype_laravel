@@ -2,7 +2,7 @@ import React from 'react';
 import '.././TestimonialsCardGroup/testimonialscardgroup.scss';
 import TestimonalCardGroup from '../TestimonialsCardGroup/TestimonialCardGroup';
 import profile from '../../../Assets/images/phil_edited_sm.jpg';
-import { ReactComponent as StarFull } from '../../../Assets/svg/star-full.svg';
+import StarFull from '../../../Assets/svg/star-full.svg';
 
 
 export const boxData = [
